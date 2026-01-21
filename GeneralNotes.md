@@ -8,6 +8,67 @@
 
 
 
+# ⭐ **Story Explanation of our Problem Statement**
+
+**“A Lightweight Continuous Behavioral Authentication System Using Keystroke Dynamics and Interaction Patterns…”**
+
+
+
+## 🔥 **Start with a relatable real-world story (Hook)**
+
+*“Sir, imagine this. A student logs into his university portal using his correct username and password. He leaves his laptop for just two minutes. Another person quickly sits in his place and starts downloading confidential exam papers. The system still thinks it is the same student — because authentication happened only **once at login**, not continuously. The system has no idea that the user has changed.”*
+
+
+
+## 🔐 **Highlight the core problem**
+
+*“This is a major security gap in most digital systems today. Passwords or OTPs verify a user only at the start. Once someone logs in, the system assumes the same person is sitting forever. If an attacker hijacks the session, the system cannot detect it.”*
+
+## 🧠 **Introduce the insight (Your solution idea)**
+
+*“But humans have unique behavioral patterns — the way we type, the speed we press keys, the gap between characters, our mouse movement style, our interaction rhythm. These patterns act like a digital fingerprint.”*
+
+
+## 🚀 **Introduce your project as the hero**
+
+*“So our project continuously monitors these behavioral features in the background. If the behavior suddenly changes — meaning a different person has taken over — the system instantly detects it and locks the session.”*
+
+
+
+## 🧩 **Why lightweight? Why C?**
+
+*“Unlike advanced ML-based systems that require heavy models, our goal is to build a **lightweight, real-time system in C** that works even on low-resource devices. No external ML models, no large datasets — completely algorithm-based detection.”*
+
+
+
+## 🛡️ **How the system protects**
+
+*“Instead of verifying only at login, our system constantly verifies the user every few seconds by analyzing their:*
+
+* *Keystroke timing patterns*
+* *Hold time & flight time between keys*
+* *Mouse movement speed*
+* *Interaction rhythm*
+
+*If these patterns drift too much from the baseline, we flag it as a possible attacker.”*
+
+
+
+## 🌐 **Where this is useful**
+
+*“This solution is needed in banking websites, exam portals, office logins, and shared public computers where user-switching risk is high.”*
+
+
+## 🎯 **Conclusion — Clear one-line summary**
+
+*“In short, we are building a lightweight, continuous, behavior-based authentication system that detects imposters **after login**, even if they know the correct password.”*
+
+
+----
+
+
+
+
 # Key Terms Involved In This Project: 
 
 #### Flight Time: 
