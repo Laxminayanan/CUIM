@@ -23,20 +23,20 @@ typedef enum FREE_STATUS{
 } FREE_STATUS;
 
 // Function Prototypes/Forward Declarations.
-String *initializeTheString(void);
+String *initializePlaceToStoreOneLineOfContent(void);
 String *readOneLineOfContent(const char *const);
 char getChar(void);
 APPEND_STATUS append(String *const,const char);
 Character *lastAppendedCharacterAddress(Character *const);
-void printTheString(const String *const);
-FREE_STATUS freeTheString(String **const);
+void printOneLineOfContent(const String *const);
+FREE_STATUS freeOneLineOfContent(String **const);
 
 int main(void){
 	String *nameOfTheUser = readOneLineOfContent("Enter Your Name For Profile Creation: ");
 	if(nameOfTheUser != NULL){
 	    printf("Entered Name: "); 
-		printTheString(nameOfTheUser);
-		freeTheString(&nameOfTheUser);
+		printOneLineOfContent(nameOfTheUser);
+		freeOneLineOfContent(&nameOfTheUser);
 	}else{
 	    printf("Currently Unable To Store The Content That You Entered On Console!\n"); 
 	}
@@ -44,7 +44,7 @@ int main(void){
 }
 
 // Actual Function Defintions. 
-String *initializeTheString(void){
+String *initializePlaceToStoreOneLineOfContent(void){
     String *ptr = malloc(sizeof(String)); 
     if(ptr != NULL){
         ptr -> start = NULL; 
@@ -55,7 +55,7 @@ String *initializeTheString(void){
 }
 
 String *readOneLineOfContent(const char *const prompt){
-	String *string = initializeTheString();
+	String *string = initializePlaceToStoreOneLineOfContent();
 	if(string != NULL){
 		printf("%s", prompt);
 		char character;
@@ -64,7 +64,7 @@ String *readOneLineOfContent(const char *const prompt){
 		while(character != '\n'){
 			statusOfAppend = append(string, character);
 			if(statusOfAppend != APPEND_SUCCESS){
-				freeTheString(&string);
+				freeOneLineOfContent(&string);
 				return NULL;
 			}
 			character = getChar();
@@ -109,7 +109,7 @@ Character *lastAppendedCharacterAddress(Character *const start){
 	}
 }
 
-void printTheString(const String *const string){
+void printOneLineOfContent(const String *const string){
     if(string != NULL){
     	if(string -> start != NULL){
     		Character *temp = string -> start;
@@ -122,7 +122,7 @@ void printTheString(const String *const string){
     }
 }
 
-FREE_STATUS freeTheString(String **string){
+FREE_STATUS freeOneLineOfContent(String **string){
 	if(string == NULL){
 		return INVALID_POINTER_FOR_FREE;
 	}
