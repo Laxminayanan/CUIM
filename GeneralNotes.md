@@ -162,3 +162,157 @@ So if another person takes over the system:
 ✔ How to integrate flight time in your detection algorithm
 
 
+
+
+
+
+
+
+
+
+# Below is **the most complete list of questions judges may ask** for project: 
+**“A Lightweight Continuous Behavioral Authentication System Using Keystroke Dynamics and Interaction Patterns for Secure Real-Time User Verification in C.”**
+
+This includes **technical, conceptual, mathematical, design-based, security-based, implementation-based, justification-based, and tricky questions**.
+
+# ✅ **1. High-Level Concept Questions**
+
+1. What is continuous authentication and how is it different from traditional authentication?
+2. Why did you choose behavioral patterns instead of passwords?
+3. What makes keystroke dynamics reliable as a biometric?
+4. Why is continuous authentication important in modern systems?
+5. What real-world problems does your system solve?
+6. What makes your approach lightweight compared to existing solutions.
+
+
+# ✅ **2. Problem Understanding Questions**
+
+1. What are the limitations of passwords and OTP-based authentication?
+2. Why do we need continuous authentication even after login?
+3. What types of attacks does your solution prevent?
+4. How does your system help prevent session hijacking?
+5. What are the risks if continuous authentication is not used?
+
+
+# ✅ **3. Technical Implementation Questions (C Language)**
+
+1. Why was C chosen instead of Python or Java?
+
+2. How did you implement keystroke capture in C?
+
+3. How do you measure timing features (e.g., key press duration)?
+
+4. What data structures did you use for storing patterns?
+
+5. How do you handle noise in captured data?
+
+6. How is the baseline (user profile) stored and updated?
+
+7. How do you compute similarity in C?
+
+   * Euclidean distance?
+   * Manhattan distance?
+   * Thresholding?
+
+8. How does your system run in real-time without delays?
+
+9. How do you ensure memory safety and prevent buffer overflows?
+
+10. Did you use multi-threading or event-based callbacks?
+
+
+# ✅ **4. Algorithm & Behaviour Modeling Questions**
+
+1. What behavioral features do you track? (Dwell time, flight time…)
+2. How do you define “normal behavior”?
+3. How many samples are required to build the baseline?
+4. How do you detect deviation from the baseline?
+5. Which statistical similarity measure did you use and why?
+6. How do you handle gradual behavioral changes over time?
+7. What thresholds did you set and how were they calculated?
+8. How does your system differentiate between anomalies and attacks?
+
+
+
+# ✅ **5. Accuracy, Testing & Evaluation Questions**
+
+1. How did you validate the accuracy of your authentication system?
+2. How many users did you test with?
+3. What are your False Acceptance Rate (FAR) and False Rejection Rate (FRR)?
+4. How do you reduce false positives?
+5. How did you simulate attacker behavior?
+6. Did you test the system on different keyboards or devices?
+7. What happens when a user types fast vs. slowly?
+
+
+
+# ✅ **6. Security & Privacy Questions**
+
+1. Can an attacker mimic someone’s typing rhythm?
+2. How do you protect user behavior data?
+3. Do you store raw keystrokes or only derived metrics?
+4. What happens if the system incorrectly rejects the user?
+5. Does your system violate user privacy?
+6. How do you prevent replay attacks?
+7. How does your system behave under keyloggers or malware?
+
+
+
+# ✅ **7. Edge Case Questions**
+
+1. What if the user is tired or typing with one hand?
+2. What about disabled users or people with inconsistent typing?
+3. How does the system react if the user uses a different keyboard?
+4. How does your system handle burst typing, backspaces, or corrections?
+5. What if the user suddenly changes behavior (stress, injury, cold hands)?
+
+
+# ✅ **8. System Design & Architecture Questions**
+
+1. What is your system pipeline from event capture → processing → authentication?
+2. Is your system event-driven, polling-based, or interrupt-based?
+3. Does your solution support multi-user environments?
+4. Can this system work on low-power or embedded devices?
+5. How scalable is your architecture?
+
+
+# ✅ **9. Deployment & Real-World Use Case Questions**
+
+1. Can this system work on mobile phones?
+2. Can it run in offline mode?
+3. What industries can immediately adopt this solution?
+4. What is the expected computational overhead?
+5. Can your system be integrated with existing authentication systems?
+
+
+# ✅ **10. Ethical & Societal Questions**
+
+1. Does continuous monitoring violate user consent?
+2. How do you ensure fairness across different user groups?
+3. Is behavioral data considered sensitive biometric information?
+4. What are the legal challenges of behavioral biometrics?
+
+
+
+# ✅ **11. Time & Resource Justification Questions**
+
+1. How long did each module take to implement?
+2. Why is your solution achievable within limited time?
+3. What trade-offs did you make to keep the system lightweight?
+
+
+# ✅ **12. Tricky & Stress Questions Judges May Ask**
+
+These are used to test confidence, clarity, and depth.
+
+1. If someone copies the exact timing pattern and uses a macro, will your system fail?
+2. What if the keyboard hardware introduces timing delays?
+3. How would you scale this solution to millions of users?
+4. What happens if the OS scheduler delays your timestamp readings?
+5. How do you prevent drift in the user’s baseline over months?
+6. Why should we choose your project over advanced AI models?
+7. If this is “lightweight,” how do you justify security strength?
+8. Isn’t this just a keylogger with math? Explain the difference.
+9. What is the single biggest weakness of your system?
+10. If you had more time, what improvement would you add?
+
